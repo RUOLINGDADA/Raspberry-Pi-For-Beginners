@@ -15,10 +15,11 @@ def dash():
     led.off()
     sleep(0.25)
 
-led = LED(4)
+led = LED(22)
 print("请输入命令:\r\n1 -> on, 0 -> off, -1 -> sos:\r\n", end = "")
 try:
     while True:
+        sleep(0.01) #减少程序占用
         choice = int(input())
         if choice == 1:
             led.on()
@@ -26,6 +27,7 @@ try:
             led.off()
         elif choice == -1:
             while True:
+                sleep(0.01)
                 # S: ···
                 dot()
                 dot()
@@ -43,8 +45,7 @@ try:
                 sleep(2) #整套SOS结束，停顿2秒再循环
         else:
             print("请输入正确命令!")
-            exit
+except ValueError:
+    print("请输入正确命令!")
 except KeyboardInterrupt:
     led.off()
-
-
