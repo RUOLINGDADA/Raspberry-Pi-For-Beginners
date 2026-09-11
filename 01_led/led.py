@@ -14,7 +14,7 @@ def dash():
     sleep(0.75)
     led.off()
     sleep(0.25)
-    
+
 led = LED(4)
 print("请输入命令:\r\n1 -> on, 0 -> off, -1 -> sos:\r\n", end = "")
 try:
