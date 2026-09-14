@@ -1,6 +1,3 @@
-import os
-os.environ["GPIOZERO_PIN_FACTORY"] = "lgpio"
-
 from gpiozero import LED, Button
 from signal import pause
 
